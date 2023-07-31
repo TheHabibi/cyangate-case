@@ -30,7 +30,7 @@ public class EmployeeService {
         List<Employee> employees = new ArrayList<>();
         try (Workbook workbook = WorkbookFactory.create(new ByteArrayInputStream(decodedBytes))) {
             Sheet sheet = workbook.getSheetAt(0);
-            for (int i = 1; i < sheet.getLastRowNum() + 1; i++) { // Start from the second row (index 1)
+            for (int i = 1; i < sheet.getLastRowNum() + 1; i++) { 
                 Row row = sheet.getRow(i);
                 Employee employee = new Employee();
                 employee.setName(row.getCell(0).getStringCellValue());
