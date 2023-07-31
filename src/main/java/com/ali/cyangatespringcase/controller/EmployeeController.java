@@ -23,7 +23,6 @@ public class EmployeeController {
 
     @PostMapping("/createRecord")
     public ResponseEntity<List<Employee>> createRecord(@RequestBody String spreadsheetBytes) throws IOException {
-        System.out.println(spreadsheetBytes);
         List<Employee> insertedRecords = employeeService.createRecords(spreadsheetBytes);
         return new ResponseEntity<>(insertedRecords, HttpStatus.OK);
     }
