@@ -1,4 +1,4 @@
-# cyangate-spring-case
+# Spring Boot Rest API
  
 ## Requirements
 
